@@ -34,3 +34,14 @@ Start time: 1:30 pm
 Finish time: 2:00 pm
 
 Actual time needed to complete: 30 min
+
+
+Number and name of feature: Locations
+
+Estimate of time needed to complete: 60 min
+
+Start time: 2:05 pm
+
+Finish time: 
+
+Actual time needed to complete: 
