@@ -30,6 +30,19 @@ app.get('/location', (request, response) => {
     errorHandler('Something went wrong.', request, response);
   }
 });
+app.get('/weather', (request, response) => {
+  const weatherData = require('./data/darksky.json');
+  let weatherArr = [];
+  weatherData.daily.data.forEach( obj => {
+    weatherArr.push(new Weather(obj.time, obj.summary)
+  });
+  return weatherArr;
+});
+
+function Weather (time, forcast){
+  this.time = time;
+  this.forcast = forcast;
+}
 
 function Location (city, geoData) {
   this.search_query = city;
