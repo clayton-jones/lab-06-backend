@@ -27,12 +27,12 @@ app.get('/location', (request, response) => {
     response.send(locationData);
   }
   catch(error) {
-    errorHandler('Something went wrong.', request, response);
+    errorHandler(error, request, response);
   }
 });
 
 app.get('/weather', (request, response) => {
-  try{
+  try {
     const weatherData = require('./data/darksky.json');
     let weatherArr = [];
     weatherData.daily.data.forEach(obj => {
@@ -44,8 +44,8 @@ app.get('/weather', (request, response) => {
     });
     response.send(weatherArr);
   }
-  catch (error){
-    errorHandler('somethig is wrong', request, response);
+  catch (error) {
+    errorHandler(error, request, response);
   }
 
 });
@@ -64,6 +64,7 @@ function Location (city, geoData) {
 }
 
 function errorHandler (error, request, response) {
+  console.log('inside errorHandler');
   response.status(500).send(error);
 }
 
