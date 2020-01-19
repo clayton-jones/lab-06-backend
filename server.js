@@ -30,18 +30,23 @@ app.get('/location', (request, response) => {
     errorHandler('Something went wrong.', request, response);
   }
 });
+
 app.get('/weather', (request, response) => {
   const weatherData = require('./data/darksky.json');
   let weatherArr = [];
-  weatherData.daily.data.forEach( obj => {
-    weatherArr.push(new Weather(obj.time, obj.summary)
+  weatherData.daily.data.forEach(obj => {
+    console.log('obj.time:', obj.time);
+    // Adreinne helped solve the time display issue
+    let time = new Date(obj.time * 1000).toString().slice(0, 15);
+
+    weatherArr.push(new Weather(time, obj.summary));
   });
-  return weatherArr;
+  response.send(weatherArr);
 });
 
-function Weather (time, forcast){
+function Weather (time, forecast){
   this.time = time;
-  this.forcast = forcast;
+  this.forecast = forecast;
 }
 
 function Location (city, geoData) {
