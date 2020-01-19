@@ -4,12 +4,18 @@
 **Author**: Clayton, Tenaw
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
+## Delpoyed site
+https://city-explorers.herokuapp.com/
+
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 Provides information to the user about a city of their choice, in order to prepare them for their upcoming visit.
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+- fork the repo
+- clone it down locally
+- run `npm i` in terminal from inside repo to install dependancies
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
@@ -35,6 +41,7 @@ Finish time: 2:00 pm
 
 Actual time needed to complete: 30 min
 
+---------------------------------------
 
 Number and name of feature: Locations
 
@@ -46,6 +53,7 @@ Finish time: 2:46 pm
 
 Actual time needed to complete: 41 min
 
+---------------------------------------
 
 Number and name of feature: Weather
 
@@ -57,8 +65,7 @@ Finish time: 4:05 pm
 
 Actual time needed to complete: 1 hr 15 min
 
-
-
+---------------------------------------
 
 Number and name of feature: Errors
 
