@@ -45,3 +45,14 @@ Start time: 2:05 pm
 Finish time: 2:46 pm
 
 Actual time needed to complete: 41 min
+
+
+Number and name of feature: Weather
+
+Estimate of time needed to complete: 60 min
+
+Start time: 2:50 pm
+
+Finish time: 4:05 pm
+
+Actual time needed to complete: 1 hr 15 min
