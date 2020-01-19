@@ -56,3 +56,16 @@ Start time: 2:50 pm
 Finish time: 4:05 pm
 
 Actual time needed to complete: 1 hr 15 min
+
+
+
+
+Number and name of feature: Errors
+
+Estimate of time needed to complete: 45 min
+
+Start time: 4:30 pm
+
+Finish time: 
+
+Actual time needed to complete: 
