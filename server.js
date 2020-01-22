@@ -6,6 +6,7 @@ require('dotenv').config();
 //declare application dependancies
 const express = require('express');
 const cors = require('cors');
+const superagent = require('superagent');
 
 //Application Setup
 const PORT = process.env.PORT;
@@ -19,12 +20,17 @@ app.get('/', (request, response) => {
 
 app.get('/location', (request, response) => {
   try {
-    const geoData = require('./data/geo.json');
-    // console.log('geoData: ', geoData);
     const city = request.query.city;
-    const locationData = new Location(city, geoData);
+    let url = `https://us1.locationiq.com/v1/search.php?key=${process.env.GEOCODE_API_KEY}&q=${city}&format=json&limit-1`;
+    superagent.get(url)
+      .then(data => {
+        const geoData = data.body[0];
+        console.log(geoData);
+        const locationData = new Location(city, geoData);
+        response.send(locationData);
+      });
+    // console.log('geoData: ', geoData);
     // console.log('locationData', locationData);
-    response.send(locationData);
   }
   catch(error) {
     errorHandler(error, request, response);
